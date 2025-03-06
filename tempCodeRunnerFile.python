@@ -1,0 +1,30 @@
+ if user_score < 21:
+        decision = input("Do you want to continue? 'y' or 'n': ")
+        if decision == 'y':
+            user += str(deal_card())
+        elif decision == 'n':
+            if comp_score < 17:
+                computer += str(deal_card())
+            cont = True
+    else:
+        cont = True
+
+def compare(deckC, deckU):
+    if deckC == deckU:
+        print ("It is a draw")
+    elif deckC == 21:
+        print("Sorry, You Lose")
+    elif deckU == 21:
+        print("Congrats you Win!!")
+    elif deckU > 21:
+        print("Sorry, You Lose")
+    elif deckC> 21:
+        print("Congrats, Computer Lost")
+    else:
+        if deckC> deckU:
+            print("Sorry, You Lose")
+        else:
+            print("Congrats, You Win")
+compare(comp_score, user_score)
+
+replay = input("Do you want to start? 'y' or 'n' ")
