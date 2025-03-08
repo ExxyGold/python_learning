@@ -51,7 +51,6 @@ while not done_ordering:
         payment = money()
 
         if payment >= cost:
-            
             account += cost
             change =  round(payment - cost, 2)
     
@@ -59,6 +58,5 @@ while not done_ordering:
                 print(f"Here is your {order} ☕ Enjoy!")
             else:
                 print (f"Here is ${change} in change.\n Here is your {order} ☕ Enjoy!")
-
         else:
             print("Sorry, that's not enough money. Money refunded")
