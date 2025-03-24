@@ -1,24 +1,23 @@
-print("Welcome to Python Pizza Delivery")
+from pi_art import treasure_art
 
-size = input("What size of pizza do you want?: ").lower()
-pepperoni = input("Do you wish for pepperoni?: ").lower()
-extra_cheese = input("Do you want extra cheese?: ").lower()
+print(treasure_art)
+print("Welcome to Treasure Island.\n Your Mission is to find the treasure.")
 
+first_choice = input("You're at a cross road. Where do you want to go? Type 'left' or 'right'.\n")
 
-if size == "s":
-    amount = 15
-elif size == "m":
-    amount = 20
-elif size == "l":
-    amount = 25
-
-if pepperoni == "yes":
-    if size == "s":
-        amount += 2
+if first_choice == "left":
+    second = input("You come to a lake. There is an island in the middle of the lake. Type 'wait' to wait for a boat. Type 'swim' to swim across.\n")
+    if second == "wait":
+        third = input("You arrived ath the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose?\n")
+        if third == "yellow":
+            print("You win, You found the")
+        elif third == "blue":
+            print("Game Over, you entered a room and freezed to death")
+        elif third == "red":
+            print("Game, over, you entered a fiery furnance")
     else:
-        amount += 3
+        print("Game Over, you were swallowed by Crocs")
 
-if extra_cheese == "yes":
-    amount += 1
 
-print(f"Your total bill is ${amount}")
+else:
+    print("Game Over, you walked into the desert")
